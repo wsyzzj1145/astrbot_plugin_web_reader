@@ -31,3 +31,43 @@ _✨ 一个赋予 AstrBot 大模型智能搜索与深度阅读网页能力的插
 1. **进入 AstrBot 的插件目录**：
    ```bash
    cd AstrBot/data/plugins/
+   ```
+
+2. **创建插件目录并放入文件**：
+   你可以通过 Git Clone 或者手动新建 `astrbot_plugin_web_reader` 文件夹，并将 `main.py`、`metadata.yaml` 和 `requirements.txt` 放入其中。
+
+3. **安装依赖库**：
+   在插件目录下（或在你的 AstrBot 虚拟环境中）执行以下命令：
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **重启 AstrBot**：
+   重启你的 AstrBot 以加载新插件。在管理面板或控制台日志中看到插件成功加载即可。
+
+## 🚀 使用示例
+
+在任意受支持的聊天平台中，您可以直接像平常一样和机器人对话。
+
+**示例 1：热点新闻总结**
+> **用户**：帮我搜索一下今天关于“人工智能”的最新新闻，选一篇最详细的文章点进去，把核心内容总结给我。
+> 
+> **机器人的自动处理流程**：
+> 1. 调用 `web_search("人工智能 最新新闻")`
+> 2. 拿到搜索列表，挑选出一个合适的新闻 URL
+> 3. 调用 `web_fetch("https://xxx.com/news/123")`
+> 4. 阅读长文本并返回精华总结
+
+**示例 2：查阅文档或百科**
+> **用户**：什么是“黑神话悟空”？去查一下它的维基百科或者官网，告诉我它的发售日期和主要玩法。
+
+## ⚙️ 依赖清单
+
+本插件依赖以下第三方库（见 `requirements.txt`）：
+- `duckduckgo-search>=6.0.0`
+- `httpx>=0.27.0`
+- `beautifulsoup4>=4.12.0`
+
+## 📝 许可证
+
+本项目基于[MIT License](LICENSE) 开源，欢迎提交 Issue 或 Pull Request！
