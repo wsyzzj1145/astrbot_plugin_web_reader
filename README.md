@@ -1,0 +1,2 @@
+# astrbot_plugin_web_reader
+一个赋予 AstrBot 大模型智能搜索与深度阅读网页能力的插件
