@@ -1,0 +1,7 @@
+name: astrbot_plugin_web_reader
+display_name: 智能搜索与网页阅读
+short_desc: 赋予大模型网络搜索和深入网页阅读的能力，让模型自主查阅详细资料。
+version: 1.0.0
+author: YourName
+description: 提供 web_search 和 web_fetch 两个 LLM 工具。大语言模型可以先搜索网页，再提取指定 URL 的具体内容。
+astrbot_version: ">=4.0.0"
